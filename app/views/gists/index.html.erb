@@ -1,0 +1,24 @@
+<div id='top-bar'>
+
+</div>
+<div id='content'></div>
+
+<script>
+$(function(){
+  var $contentEl = $("#content");
+  var $sidebar = $('#top-bar');
+  var user_id = <%= current_user.id %>;
+  var gists = <%= Gist.all.to_json.html_safe %>;
+  var fav_gists = <%= current_user.favorites.to_json.html_safe %>;
+
+  window.GP.initialize(
+    $contentEl,
+    $sidebar,
+    gists,
+    user_id,
+    fav_gists
+  );
+
+});
+
+</script>
