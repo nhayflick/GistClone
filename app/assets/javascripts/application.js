@@ -14,9 +14,11 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require backbone-forms
 //= require backbone-relational
 //= require gist_project_app
 
+//= require_tree ./distribution
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
